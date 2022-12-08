@@ -1,0 +1,13 @@
+<!-- Navigation -->
+            <nav class="navbar">
+                <section class="navbar-dashboard">
+                    <a href="{% url 'index' %}">Dashboard</a>
+                    <div id="user">
+                        {% if not hide_nav_link %}
+                        <span>Welcome, {{ profile.first_name}}</span>
+                        <a class="button" href="{% url 'add book' %}">Add Book</a>
+                        <a class="button" href="{% url 'show profile' %}">Profile</a>
+                        {% endif %}
+                    </div>
+                </section>
+            </nav>
