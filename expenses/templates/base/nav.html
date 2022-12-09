@@ -1,0 +1,12 @@
+{% load static %}
+<!-- Navigation Bar -->
+<nav>
+    <ul>
+        <li class="img"><img src="{% static 'images/dollar.png' %}" alt="dollar"></li>
+        <li><a href="{% url 'index' %}">Expenses Tracker</a></li>
+        {% if not nav_hide_link %}
+            <li class="right"><a href="{% url 'show profile' %}">Profile</a></li>
+        {% endif %}
+    </ul>
+</nav>
+<!-- End Navigation Bar -->
